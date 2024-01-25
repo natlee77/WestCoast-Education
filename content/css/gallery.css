@@ -1,0 +1,51 @@
+@import  './contact.css';
+@import './utilities.css';
+@import './navigation.css';
+@import './site.css';
+/* Gallery styles */
+body {
+  background: #006579;
+}
+
+main {
+  padding: 1rem;
+}
+
+#courses-gallery {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.course-image {
+  border: solid 1px #44ef00;
+  background: #fff;
+  min-width: 300px;
+
+  border-radius: 0.3rem;
+}
+
+.course-image img {
+  border-top-right-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.course-image p {
+  text-align: center;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  #courses-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  #courses-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

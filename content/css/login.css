@@ -1,0 +1,58 @@
+/* classes for the contact page */
+/* Mobile First... */
+@import  './contact.css';
+@import './utilities.css';
+@import './navigation.css';
+@import './site.css';
+  article{
+  background-color: aquamarine;
+}  
+ 
+  #user-form {
+   
+  padding: 1.88rem 0;
+  margin: 0 1rem; 
+}
+  .form-control {
+    margin-bottom: 1rem;  
+  } 
+  label {
+    display: block;
+  }
+  input,
+  textarea {
+  width: 100%;
+  padding: 0.63rem;
+  border: solid 1px #6465d4;
+  border-radius: 0.3rem;
+  height: 1.8rem;
+}
+input:focus,
+textarea:focus {
+  outline: none !important;
+  border: solid 2px #ef6c00;
+}  
+.outset {
+  border-style:outset;
+  color: #bcbedd;
+}
+
+#user-form button {
+  margin-top: 1rem;  
+}  
+h1{
+font-weight: bold;
+color:#13085b;
+}
+  
+ 
+
+/* Media Queries */
+/* min-width: 768px */
+@media (min-width: 768px) {
+  #user-form {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+}
