@@ -3,11 +3,24 @@
     {
       "title": "IT Support",
       "number": "0987",
-      "days": "90",
-      "price": "17500",
+      "days": 90,
+      "price": 17500,
       "type": "distance",
       "imageUrl": "ai.jpg",
+      "rating": 4.8,
       "description": "test",
+      "users": [
+        {
+          "firstName": "Merry",
+          "lastName": "Popins",
+          "telephone": "+4612345678",
+          "street": "Huvudgatan 1",
+          "postIndex": 12345,
+          "city": "Degerfors",
+          "email": "info@info.com",
+          "password": "123456"
+        }
+      ],
       "id": 1
     },
     {
@@ -21,6 +34,7 @@
       "start": "2024-02-02",
       "isAktive": false,
       "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam commodo venenatis rhoncus. VivamusvehicleId lacusvehicleId elit tristique vulputate.",
+      "users": [],
       "id": 2
     },
     {
@@ -34,6 +48,7 @@
       "start": "2024-22-01",
       "isAktive": false,
       "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam commodo venenatis rhoncus. VivamusvehicleId lacusvehicleId elit tristique vulputate. ",
+      "users": [],
       "id": 3
     },
     {
@@ -47,6 +62,7 @@
       "start": "2024-22-01",
       "isAktive": false,
       "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam commodo venenatis rhoncus. VivamusvehicleId lacusvehicleId elit tristique vulputate. ",
+      "users": [],
       "id": 4
     },
     {
@@ -60,6 +76,7 @@
       "start": "2024-22-01",
       "isAktive": false,
       "description": "The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. Many courses in one!",
+      "users": [],
       "id": 5
     },
     {
@@ -73,6 +90,7 @@
       "start": "2024-22-01",
       "isAktive": false,
       "description": "The modern JavaScript  course for everyone! Master JavaScript with projects, challenges and theory. Many courses in one!",
+      "users": [],
       "id": 6
     },
     {
@@ -83,27 +101,39 @@
       "type": "distance",
       "imageUrl": "no-bild.jpg",
       "description": "test",
+      "users": [],
       "id": 7
     },
     {
-      "id": 8,
-      "title": "typescript",
-      "number": "1971",
-      "days": "77",
-      "price": "18999",
-      "type": "classroom",
-      "imageUrl": "no-bild.jpg",
-      "description": "sdgjhasgd kshdkjashdkljas kjshdkjashdkljw lisajdflinnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
-    },
-    {
-      "id":  9 ,
+      "id": 9,
       "title": "ttttt",
-      "number": "",
+      "number": "54465",
       "days": "90",
       "price": "",
       "type": "classroom",
       "imageUrl": "no-bild.jpg",
-      "description": "trytrfsysr"
+      "description": "trytrfsysr",
+      "users": []
+    },
+    {
+      "title": "test versioner",
+      "number": "123456",
+      "days": "88",
+      "price": "11 111",
+      "type": "classroom",
+      "imageUrl": "no-bild.jpg",
+      "description": "mmmmmmm",
+      "id": 10
+    },
+    {
+      "title": "tttttttttt",
+      "number": "JGH",
+      "days": "5",
+      "price": "1233",
+      "type": "distance",
+      "imageUrl": "no-bild.jpg",
+      "description": "gfhfh",
+      "id": 11
     }
   ],
   "users": [
@@ -129,6 +159,28 @@
         }
       ],
       "id": 1
+    },
+    {
+      "firstName": "Nataliya",
+      "lastName": "Lisjö",
+      "street": "Bredablicksgatan 10 a",
+      "postIndex": "69335",
+      "city": "Degerfors",
+      "telephone": "0735651034",
+      "email": "natlisjo@gmail.com",
+      "password": "admin",
+      "id": 2
+    },
+    {
+      "firstName": "Nataliya",
+      "lastName": "Lisjö",
+      "street": "Bredablicksgatan 10 a",
+      "postIndex": "69335",
+      "city": "Degerfors",
+      "telephone": "0735651034",
+      "email": "natlisjo@gmail.com",
+      "password": "admin",
+      "id": 3
     }
   ]
 }

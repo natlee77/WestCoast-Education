@@ -1,7 +1,7 @@
 import HttpClient from './http.js';
 import {
     editCourse
-} from '../forms/editCourses.js';
+} from '../forms/html-forms.js';
 import {
     convertFormDataToJson
 } from "./utilities.js";

@@ -5,22 +5,60 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-      <link
+    <link
       rel="stylesheet"
-      href="/content/css/contact.css" />  
+      href="/content/css/contact.css" />
     <script
       type="module"
       src="/scripts/edit-course.js"
       defer></script>
     <title>Uppdate course</title>
   </head>
-  <body> 
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <ul class="menu">
+            <li class="logo">
+              <a
+                class="logo-title"
+                href="/index.html"><span><i
+                    class="fa-solid fa-building-columns"></i></span> Westcoast
+                Education</a>
+            </li>
+            <li class="toggle">
+              <input
+                class="menu-btn"
+                type="checkbox"
+                id="menu-btn" />
+              <label
+                class="menu-icon"
+                for="menu-btn"><span class="nav-icon"></span>
+              </label>
+            </li>
+
+            <li class="menu-item">
+              <a
+                class="active"
+                href="/admin/admin.html">Courses</a></li>
+            <li class="menu-item">
+              <a href="/admin/add-course.html">Add course</a>
+            </li>
+            <li class="menu-item">
+              <a
+                href="/admin/listUser.html">Users</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
       <article>
         <section id="contact-form">
-            <h1>Update course</h1>            
-            <button id="delete" class="btn btn-delete">Delete course</button>
-            <form id="editCourseForm"></form>
-        </section>        
-      </article>   
+          <h1>Update course</h1>
+          <button id="delete" class="btn btn-delete">Delete course</button>
+          <form id="editCourseForm"></form>
+        </section>
+      </article>
+    </main>
   </body>
 </html>

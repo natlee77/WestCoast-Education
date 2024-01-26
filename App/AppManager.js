@@ -35,14 +35,14 @@ export   default class AppManager{
             try{
                  const http = new HttpClient(url);
                  const data = await http.get();
-                // return data ;  
+                 //create {user}
                 const user = new User(
                     data.id,
                     data.firstName, 
                     data.lastName, 
                     data.email,  //som i JSON
                     data.telephone ,
-                    data.order
+                     
                     );  
                  return user; 
                  console.log(user);
@@ -51,5 +51,30 @@ export   default class AppManager{
                 throw new Error(`problem to get data ${response.status} ${response.statusText}`);
               }
              
+    }
+    async addUser(){ 
+        const url='http://localhost:3000/users';
+        
+        try{
+            const http = new HttpClient(url);          
+            const data = await http.add();
+           
+            //prepear data packet 
+            const user = data.map(data => {
+                return new User(
+                     data.id,
+                     data.firstName, 
+                     data.lastName, 
+                     data.email,  //som i JSON
+                     data.telephone ,
+                     );
+            });
+            
+            
+             return user;
+            
+        } catch (error) {     
+            throw new Error(`problem to get data ${response.status} ${response.statusText}`);
+          }
     }
 }

@@ -1,40 +1,34 @@
 import HttpClient from './http.js';
-import { createUser } from '../forms/registrate.js';
- 
+import { createUserHTMLCard } from '../forms/html-forms.js';
+import AppManager from '../App/AppManager.js';
+import { convertFormDataToJson } from './utilities.js';
 
-// const form = document.querySelector('#addCourseForm');
+const form = document.querySelector('#newUserForm');
 const cardUser=document.querySelector('#user-form'); 
-function initPage() { 
-  cardUser.appendChild(createUser());  
+
+const initPage = ()=> { 
+  cardUser.appendChild(createUserHTMLCard());  
+
+  
   }
  
-  function addUser(e) {
+  const addUser = async(e)=> {
       e.preventDefault();//do not refresh
-
-  //  create new object (user)..
-  const user={         
-     firstName : user.firstName ,
-     lastName:user.lastName  ,
-     telephone:user.telephone,
-     street:user.street,
-     postIndex : user.postIndex,
-     city:user.city,
-     email : user.email,
-     password : user.password,        
-  };
-  console.log('add',user);
-     saveUser(user);
+      // const newuser= await new AppManager().addUser();
+      const user = new FormData(form);
+      // console.log(...course);
+    const obj = convertFormDataToJson(user); 
+    console.log('add',user);
+       saveUser(obj);
 }
 
 async function saveUser(user) {
-  const url = 'http://localhost:3000/users/';
-  // console.log('url',url);
+  const url = 'http://localhost:3000/users';   
   const http = new HttpClient(url);
-
-  const newUser = await http.add(user);
-  // console.log(newCourse);
+   await http.add(user);
+  location.href='./sign.html'
 }
 
 document.addEventListener('DOMContentLoaded', initPage);
 //add submit to form 
-// form.addEventListener('submit', addCourse);
+  form.addEventListener('submit', addUser);

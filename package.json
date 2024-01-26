@@ -11,5 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "json-server": "^0.17.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natlee77/WestCoast-Education.git"
+  },
+  "bugs": {
+    "url": "https://github.com/natlee77/WestCoast-Education/issues"
+  },
+  "homepage": "https://github.com/natlee77/WestCoast-Education#readme"
 }

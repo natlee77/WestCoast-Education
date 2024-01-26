@@ -9,9 +9,8 @@ function initPage() {
 
     //get only id-digit
   const courseId = location.search.split('=')[1];
-  const courseCard= displayCourseDetails(courseId);    
-      
-  console.log(  courseCard);
+  const courseCard= displayCourseDetails(courseId);         
+ 
   aboutcourse.appendChild(createCourseCard(courseCard));
     
    
@@ -19,8 +18,7 @@ function initPage() {
 
 async function displayCourseDetails(id) {
   ///pages/course-details.html?id=1
-  const url = 'http://localhost:3000/courses/'+id;
-    //  console.log('url',url);
+  const url = 'http://localhost:3000/courses/'+id;  
   const http = new HttpClient(url);
   const course = await http.get();    
   console.log('course',course);

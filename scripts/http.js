@@ -27,7 +27,7 @@ export default class HttpClient {
   }
 //
   async add(data) {
-      console.log('data',data);
+     
     try {
         const response = await fetch(this.#url, {
           //post metod--skapa fetch paket
