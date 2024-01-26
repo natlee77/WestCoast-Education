@@ -52,4 +52,7 @@ footer {
   section i {
     font-size: 1.3rem;
   }
+  #about-course  .details-top {
+    flex-direction: row;
+  }
 }

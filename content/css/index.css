@@ -40,21 +40,21 @@
 #info-area .display-image {
   display: none;
 }
-
+ 
 #info-area .info {
   min-height: 300px;
   padding-top: 2rem;
   text-align: center;
 }
-
+ 
 #info-area .info h3 {
   font-size: 1.5rem;
 }
-
+ 
 #info-area .info p {
   padding-bottom: 1rem;
 }
-
+ 
 #info-area .info a {
   margin-bottom: 1rem;
 }
@@ -63,11 +63,13 @@
 @media (min-width: 768px) {
   #main-area {   
     width: 100%;  
-  }  
+  }
+   
   #info-area {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+ 
   #info-area .display-image {
     display: block;
     background: url('../images/digital.jpg') no-repeat center center/cover;
@@ -77,9 +79,35 @@
     padding-top: 3rem;
   }
 }
+ .details-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 1rem 2rem;
+  border: solid 2px #5a7319;
+  
+}
+#about-course img {
+  width: 400px;
+  height: 100%;
+  object-fit: cover;
+}
+
+#about-course p {
+  margin: 1.25rem 0;
+}
+#about-course button{
+  width: 100%;
+}
+.rating {
+  color: rgb(147, 174, 15);
+}
 
 @media (min-width: 1200px) {
   #main-area {    
     height: 800px;        
   }
+ 
 }

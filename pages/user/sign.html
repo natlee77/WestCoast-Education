@@ -18,6 +18,7 @@
     <script
       src="https://kit.fontawesome.com/55174c58a9.js"
       crossorigin="anonymous"></script>
+    <script type="module" src="/scripts/login.js"  defer> </script>
     <title>Westcoast Education | Wellcome</title>
   </head>
   <body class="grid-container">
@@ -69,21 +70,15 @@
                 <p>In order to use the editing and rating capabilities of
                   Westcoast Educartion, as well as get personal recommendations
                   you will need to login to your account. </p>
-               
-                   
-                <!-- <p>If you signed up but didn't get your verification email, <a href="/resend-email-verification">click here</a> to have it resent.</p> -->
-
-                <form id="login_form" class=" form-control" action="/login"
-                  name="account_login" method="post" accept-charset="utf-8"
-                  data-gtm-form-interact-id="0">
-
+                 
+                <form id="login_form"    action="/login"
+                    method="post" accept-charset="utf-8">
                 
                     <div class="form-control">
-                      <label for="username">
-                        <span>Username</span>
-                        <input id="username" type="text" name="username" value
-                          autocapitalize="off"
-                          data-gtm-form-interact-field-id="0">
+                      <label for="email">
+                        <span>Email</span>
+                        <input id="email" type="text" name="email" value
+                          autocapitalize="off"   >
                       </label>
                     </div>
 
@@ -91,10 +86,9 @@
                       <label for="password">
                         <span>Password</span>
                         <input id="password" type="password"
-                          name="password" data-gtm-form-interact-field-id="1">
+                          name="password" >
                       </label>
                     </div>
-
            
 
                   <div  >
@@ -114,57 +108,7 @@
         </section>
       </article>
 
-      <!-- <section class="content">
-        <div class="column_content">
-          <h2>Sign up for an account</h2>
-          <p>Signing up for an account is free and easy. Fill out the form below
-            to get started. JavaScript is required to to continue.</p>
-
-          <form id="signup_form" class="k-form" action="/signup"
-            name="account_signup" method="post" accept-charset="utf-8"
-            data-gtm-form-interact-id="0">
-
-            <fieldset>
-              <label class="k-form-field" for="username">
-                <span>Username</span>
-                <input id="username" class="k-textbox" type="text"
-                  name="username" autocapitalize="off" value
-                  data-gtm-form-interact-field-id="0">
-              </label>
-
-              <label class="k-form-field" for="password">
-                <span>Password (4 characters minimum)</span>
-                <input id="password" class="k-textbox" type="password"
-                  name="password" value aria-autocomplete="list"
-                  data-gtm-form-interact-field-id="1">
-              </label>
-
-              <label class="k-form-field" for="password_confirm">
-                Password Confirm
-                <input id="password_confirm" class="k-textbox" type="password"
-                  name="password_confirm" value
-                  data-gtm-form-interact-field-id="2">
-              </label>
-
-              <label class="k-form-field" for="email">
-                <span>Email</span>
-                <input id="email" class="k-textbox" type="text" name="email"
-                  autocapitalize="off" value
-                  data-gtm-form-interact-field-id="3">
-              </label>
-            </fieldset>
-
-            <p>By clicking the "Sign up" button below, I certify that I have
-              read and agree to the TMDB terms of use and privacy policy.</p>
-
-            <div class="flex">
-              <input id="sign_up_button" type="submit"
-                class="k-button k-primary" value="Sign Up">
-              <p class="reset"><a href="/">Cancel</a></p>
-            </div>
-          </form>
-        </div>
-      </section> -->
+      
     </main>
     <footer>
       <section id="contact-info">

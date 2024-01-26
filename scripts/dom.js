@@ -83,6 +83,42 @@ const addImageClickHandler = (images) => {
   });
 };
 
+
+export const createCourseDetails = (course) => {
+  const details = document.createElement('div');
+  
+  details.innerHTML = `
+  
+      <div class="details-top">
+        <section>
+        <div>${
+          course.imageUrl
+            ? `<img src=" ../content/images/${course.imageUrl} "
+                class="card-img-top" alt="${course.title}"/>`
+            : `<img src="../assets/images/no-image.jpg"
+              class="card-img-top" alt="${course.title}"/>`
+        }
+        </div>
+        </section>
+      
+        <section>
+          <h1>${course.title}</h2>
+          <p>
+            <i class="fas fa-star rating"></i>
+            rating : ${course.rating}
+          </p>
+          <p class="text-muted"> About course :
+           ${course.description}</p>
+          <p> Type of education : ${course.type}</p>
+          <p> Price : ${course.price} kr</p>
+          <button id="order-btn" class="btn ">order course</button>
+          
+        
+      </div>
+    `;
+
+  return details;
+};
 // Exportera createCard och addImageClickHandler
 // namngiven export
 export { createCard, addImageClickHandler, createCoursesList, createCourseCard, createUsersList  };
