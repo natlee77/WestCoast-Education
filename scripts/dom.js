@@ -51,11 +51,11 @@ const createUsersList = (users,element)=>{
   users.forEach(user=>{    
     const container= createDiv();
     container.setAttribute('userId',user.id);
-    container.appendChild(createSpan(`student:  ${user.firstName} ${user.lastName} --`));
+    container.appendChild(createSpan(`Student :  ${user.firstName} ${user.lastName} *`));
     container.appendChild(createSpan( user.email));
-    container.appendChild(createSpan( ` -- tel:  ${user.telephone} `));
+    container.appendChild(createSpan( ` * tel:  ${user.telephone} `));
     // container.appendChild(createSpan(` Adress: ${user.street} ${user.city} ${user.postIndex} -- `)); 
-     container.appendChild(createSpan(`-- bokad kurs: ${user.order[0].title   }   `));
+    //  container.appendChild(createSpan(`-- bokad kurs: ${user.order[0].title   }   `));
     // console.log(user.order[0].title  );
     
     element.appendChild(container); 
@@ -91,32 +91,32 @@ export const createCourseDetails = (course) => {
   
       <div class="details-top">
         <section>
-        <div>${
-          course.imageUrl
-            ? `<img src=" ../content/images/${course.imageUrl} "
+        <div>${ course.imageUrl
+             ? `<img src=" ../content/images/${course.imageUrl} "
+                 class="card-img-top" alt="${course.title}"/>`
+             : `<img src="../content/images/no-bild.jpg"
                 class="card-img-top" alt="${course.title}"/>`
-            : `<img src="../assets/images/no-image.jpg"
-              class="card-img-top" alt="${course.title}"/>`
         }
         </div>
         </section>
       
         <section>
           <h1>${course.title}</h2>
-          <p>
-            <i class="fas fa-star rating"></i>
-            rating : ${course.rating}
-          </p>
+          <p><i class="fas fa-star rating"></i>
+            rating : ${course.rating}</p>
           <p class="text-muted"> About course :
            ${course.description}</p>
           <p> Type of education : ${course.type}</p>
           <p> Price : ${course.price} kr</p>
-          <button id="order-btn" class="btn ">order course</button>
-          
+          <button id="order-btn" class="btn" type="click">order course</button>
+        
+        <p> Student ordered this course: ${course.users[0].firstName } ${course.users[0].lastName }</p>
+         <p> ${course.studentName}</p>
+    
         
       </div>
     `;
-
+    
   return details;
 };
 // Exportera createCard och addImageClickHandler

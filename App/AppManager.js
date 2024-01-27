@@ -52,29 +52,28 @@ export   default class AppManager{
               }
              
     }
-    async addUser(){ 
-        const url='http://localhost:3000/users';
+    // async addUser(){ 
+    //     const url='http://localhost:3000/users';
         
-        try{
-            const http = new HttpClient(url);          
-            const data = await http.add();
-           
-            //prepear data packet 
-            const user = data.map(data => {
-                return new User(
-                     data.id,
-                     data.firstName, 
-                     data.lastName, 
-                     data.email,  //som i JSON
-                     data.telephone ,
-                     );
-            });
+    //     try{
+    //         const http = new HttpClient(url);
+    //         //prepear data packet  ?????????
+    //         const user  
+    //         //= new FormData(form);
+    //           =data.map(data => {
+    //             return new User(
+    //                  data.id,
+    //                  data.firstName, 
+    //                  data.lastName, 
+    //                  data.email,  //som i JSON
+    //                  data.telephone ,
+    //                  );
+    //         });            
             
+    //         await http.add(user);  
             
-             return user;
-            
-        } catch (error) {     
-            throw new Error(`problem to get data ${response.status} ${response.statusText}`);
-          }
-    }
+    //     } catch (error) {     
+    //         throw new Error(`problem to get data ${response.status} ${response.statusText}`);
+    //       }
+    // }
 }

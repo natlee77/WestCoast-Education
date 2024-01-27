@@ -1,10 +1,6 @@
 import HttpClient from './http.js';
-import {
-    editCourse
-} from '../forms/html-forms.js';
-import {
-    convertFormDataToJson
-} from "./utilities.js";
+import {editCourse} from '../forms/html-forms.js';
+import {convertFormDataToJson} from "./utilities.js";
 
 const editcard = document.querySelector('#contact-form');
 const form = document.querySelector('#editCourseForm');

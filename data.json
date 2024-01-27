@@ -11,6 +11,7 @@
       "description": "test",
       "users": [
         {
+          "id": 1,
           "firstName": "Merry",
           "lastName": "Popins",
           "telephone": "+4612345678",
@@ -34,7 +35,30 @@
       "start": "2024-02-02",
       "isAktive": false,
       "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam commodo venenatis rhoncus. VivamusvehicleId lacusvehicleId elit tristique vulputate.",
-      "users": [],
+      "users": [
+        {
+          "firstName": "Nataliya",
+          "lastName": "Lisjö",
+          "street": "Bredablicksgatan 10 a",
+          "postIndex": "69335",
+          "city": "Degerfors",
+          "telephone": "0735651034",
+          "email": "natlisjo@gmail.com",
+          "password": "admin",
+          "id": 2
+        },
+        {
+          "id": 1,
+          "firstName": "Merry",
+          "lastName": "Popins",
+          "telephone": "+4612345678",
+          "street": "Huvudgatan 1",
+          "postIndex": 12345,
+          "city": "Degerfors",
+          "email": "info@info.com",
+          "password": "123456"
+        }
+      ],
       "id": 2
     },
     {
@@ -48,7 +72,30 @@
       "start": "2024-22-01",
       "isAktive": false,
       "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam commodo venenatis rhoncus. VivamusvehicleId lacusvehicleId elit tristique vulputate. ",
-      "users": [],
+      "users": [
+        {
+          "firstName": "Nataliya",
+          "lastName": "Lisjö",
+          "street": "Bredablicksgatan 10 a",
+          "postIndex": "69335",
+          "city": "Degerfors",
+          "telephone": "0735651034",
+          "email": "natlisjo@gmail.com",
+          "password": "admin",
+          "id": 2
+        },
+        {
+          "id": 1,
+          "firstName": "Merry",
+          "lastName": "Popins",
+          "telephone": "+4612345678",
+          "street": "Huvudgatan 1",
+          "postIndex": 12345,
+          "city": "Degerfors",
+          "email": "info@info.com",
+          "password": "123456"
+        }
+      ],
       "id": 3
     },
     {
@@ -62,7 +109,19 @@
       "start": "2024-22-01",
       "isAktive": false,
       "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam commodo venenatis rhoncus. VivamusvehicleId lacusvehicleId elit tristique vulputate. ",
-      "users": [],
+      "users": [
+        {
+          "firstName": "Nataliya",
+          "lastName": "Lisjö",
+          "street": "Bredablicksgatan 10 a",
+          "postIndex": "69335",
+          "city": "Degerfors",
+          "telephone": "0735651034",
+          "email": "natlisjo@gmail.com",
+          "password": "admin",
+          "id": 2
+        }
+      ],
       "id": 4
     },
     {
@@ -146,18 +205,6 @@
       "city": "Degerfors",
       "email": "info@info.com",
       "password": "123456",
-      "order": [
-        {
-          "title": "IT Support",
-          "number": "0987",
-          "days": "90",
-          "price": "17500",
-          "type": "distance",
-          "imageUrl": "ai.jpg",
-          "description": "test",
-          "id": 1
-        }
-      ],
       "id": 1
     },
     {
@@ -172,15 +219,26 @@
       "id": 2
     },
     {
-      "firstName": "Nataliya",
-      "lastName": "Lisjö",
+      "firstName": "Maxim",
+      "lastName": "Pupkin",
       "street": "Bredablicksgatan 10 a",
       "postIndex": "69335",
       "city": "Degerfors",
-      "telephone": "0735651034",
-      "email": "natlisjo@gmail.com",
-      "password": "admin",
+      "telephone": "0730000000",
+      "email": "maxl@gmail.com",
+      "password": "123456",
       "id": 3
-    } 
+    },
+    {
+      "firstName": "Teo",
+      "lastName": "Matrix",
+      "street": "Kosmos 22",
+      "postIndex": "11111",
+      "city": "London",
+      "telephone": "000000000000",
+      "email": "teo@gmail.com",
+      "password": "11111",
+      "id": 4
+    }
   ]
 }

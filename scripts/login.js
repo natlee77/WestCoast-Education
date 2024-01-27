@@ -1,26 +1,24 @@
+import { addToLocalStorage } from "./utilities.js";
+
 const loginButton = document.getElementById('login_button');
 //login_form
 const initPage = () => {
-    console.log('init');
+   
 }
 
 const logInHandler = async (e) => {
-    e.preventDefault();
-    // console.log('login');
-    const users = await getAllUsers();
-    console.log('users', users
-    );
-
+    e.preventDefault();     
+    const users = await getAllUsers();  
     const foundEmail  = users.find(
         (u ) => u.email.trim().toLowerCase() === `${ email.value}`);
 
     if (foundEmail) {
-        console.log("found user email");
-       
+        console.log("found user email");       
         const foundPassword = users.find(
             (user) => user.password.trim().toLowerCase() === `${ password.value}` );
             if (foundPassword) {
                 console.log("found user password");
+                addToLocalStorage(email.value);
                 //redirect  /pages/gallery.html
                 location.href = '../gallery.html'   
             } else {
@@ -46,8 +44,6 @@ const getAllUsers = async () => {
         console.log(error);
     }
 };
-
-
 
 document.addEventListener('DOMContentLoaded', initPage);
 loginButton.addEventListener('click', logInHandler);
