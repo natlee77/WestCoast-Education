@@ -6,10 +6,10 @@ const editcard = document.querySelector('#contact-form');
 const form = document.querySelector('#editCourseForm');
 let kursid= 0;
 const deletebtn=document.querySelector('#delete');
+
+
 const initPage = () => {
     editcard.appendChild(editCourse());
-
-    // console.log(location.search); //?id=7
     const courseId = location.search.split('=')[1];
     getById(courseId);
 };
@@ -25,33 +25,23 @@ const getById = async (id) => {
 // URLSearchParams()-generate query parameters(string)
 const loadDataToForm = (course) => {
     // console.log('form-elements', form.elements );
-
     const entries = new URLSearchParams(course).entries();
-    // console.log('ent', ...entries);
-
     // console.log('entries', ...entries);
     for (let [key, value] of entries) {
         if (key !== 'id') {
             const inne = form.elements[key];
             inne.value = value;
-            // console.log(key);
-            // console.log(value);
+              console.log(key);
+              console.log(value);
         }
     }
 };
 const updateCourse = async (e) => {
-    e.preventDefault();
-    // console.log('uppdaterar');
-    const course = new FormData(form);
-    console.log(...course);
-
-    const obj = convertFormDataToJson(course);
-    //in httpClient.update() for response need URL
-    //id ????
+    e.preventDefault();   
+    const course = new FormData(form);  
+    const obj = convertFormDataToJson(course);  
     const url = `http://localhost:3000/courses/${kursid}`;
-    const http = new HttpClient(url);
-    console.log('',url);
-    
+    const http = new HttpClient(url);  
     await http.update(obj);
     //redirect  
      location.href = './admin.html';

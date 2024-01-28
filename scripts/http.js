@@ -72,6 +72,26 @@ export default class HttpClient {
       throw new Error(`Error in update metod: ${error}`);
     }
   }
+  async updatePatch(data) {
+    try {       
+      const response = await fetch(this.#url, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      if (response.ok) {
+          const result = await response.json();
+          console.log(response);
+          return result;
+      } else {
+        throw new Error(`${response.status} ${response.statusText}`);
+      }
+    } catch (error) {
+      throw new Error(`Error in update metod: ${error}`);
+    }
+  }
   async delete(data) {
     try {
       const response = await fetch(this.#url, {

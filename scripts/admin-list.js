@@ -11,7 +11,7 @@ const initPage = async() => {
     createCoursesList(courses , coursesList)
    ;
    //add click event in list
-   const cardsList=document.querySelectorAll('#courses-list div ');//=>nodelist
+   const cardsList=document.querySelectorAll('#courses-list div '); 
    cardsList.forEach(card=>{
        card.addEventListener('click',selectedCard)
    })
@@ -19,7 +19,7 @@ const initPage = async() => {
 const selectedCard = (event)=>{
     let kursId = 0;
     //target- localName  === div||span
-    //   console.log(event.target.localName);
+    //console.log(event.target.localName);
 
     if (event.target.localName === 'div'){
         kursId = event.target.getAttribute('kursId');

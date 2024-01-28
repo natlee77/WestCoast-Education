@@ -60,7 +60,7 @@
  const creatediv = (text) => {
      const div = document.createElement('div');
      div.classList.add('form-control');
-     const label = document.createElement(text);
+     const label = document.createElement('label');
      label.htmlFor = text;
      label.textContent = text;
      //<span class="errorField">Fältet är ej korrekt ifylld!</span>

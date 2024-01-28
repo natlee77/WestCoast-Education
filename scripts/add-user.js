@@ -18,7 +18,7 @@ const addUser = async (e) => {
   e.preventDefault(); //do not refresh
   // const newuser= await new AppManager().addUser();
   const user = new FormData(form);
-  // console.log(...course);
+  // console.log(...user);
   const obj = convertFormDataToJson(user);
   saveUser(obj);
 }

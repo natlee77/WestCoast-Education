@@ -4,7 +4,22 @@ export const convertFormDataToJson = (formData) => {
 
   return data;
 };
+export const getAllUsers = async () => {
+  try {
+      const url = 'http://localhost:3000/users';
 
+      const response = await fetch(url);
+
+      if (response.ok) {
+          const result = await response.json();
+          return result;
+      } else {
+          console.log('error');
+      }
+  } catch (error) {
+      console.log(error);
+  }
+};
 
 //______________Local Storage
 
@@ -25,7 +40,9 @@ export const getFromLocalStorage = () => {
   } else {
      users = JSON.parse(localStorage.getItem('westcoast users'));
   }
-  return users;
+  
+  
+   return users;
 };
 
  

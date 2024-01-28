@@ -101,15 +101,29 @@ export const createCourseDetails = (course) => {
         </section>
       
         <section>
-          <h1>${course.title}</h2>
-          <p><i class="fas fa-star rating"></i>
-            rating : ${course.rating}</p>
-          <p class="text-muted"> About course :
-           ${course.description}</p>
-          <p> Type of education : ${course.type}</p>
-          <p> Price : ${course.price} kr</p>
-          <button id="order-btn" class="btn" type="click">order course</button>
-        
+        <form id="order-form">
+          <div class="form-control">
+          <h1 type ="text" name="title" id="title">${course.title}</h2>
+          </div>
+          <div  >
+          <p  ><i class="fas fa-star rating"></i>
+          rating : ${course.rating}</p>
+          </div>
+          <div  >
+          <p type ="text" name="description" id="description"> About course : ${course.description}</p>
+          </div>
+         <div class="form-control"> 
+         <p type ="text" name="type" id="type"> Type of education : ${course.type}</p>
+         </div>
+         <div class="form-control">
+          <p type ="text" name="price" id="price"> Price : ${course.price} kr</p>
+          </div>
+         
+         <div class="form-control">
+         <button id="order-btn" class="btn" type="submit"> Order course </button>
+         </div>
+          
+         </form>
         <p> Student ordered this course: ${course.users[0].firstName } ${course.users[0].lastName }</p>
          <p> ${course.studentName}</p>
     
