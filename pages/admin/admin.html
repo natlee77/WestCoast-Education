@@ -14,7 +14,7 @@
       crossorigin="anonymous"></script>
     <script
       type="module"
-      src="/App/users.js"></script>
+      src="/scripts/admin-list.js"></script>
     <title>Administration</title>
   </head>
   <body class="grid-container">
@@ -40,18 +40,17 @@
                 ><span class="nav-icon"></span>
               </label>
             </li>
+
             <li class="menu-item">
-                <a
-                  
-                  href="/admin/admin.html">Courses</a></li>
-            
+              <a
+                class="active"
+                href="/pages/admin/admin.html">Courses</a></li>
             <li class="menu-item">
-              <a href="/admin/add-course.html">Add course</a>
+              <a href="/pages/admin/add-course.html">Add course</a>
             </li>
             <li class="menu-item">
-                <a
-                  class="active"
-                  href="/admin/listUser.html">Users</a></li>
+              <a                
+                href="/pages/admin/listUser.html">Users</a></li>
           </ul>
         </div>
       </nav>
@@ -59,8 +58,8 @@
     <main>
       <div class="container">
         <h1 class="page-title">Administration</h1>
-        <h2 class="page-sub-title">Actual users</h2>
-        <section id="users-list"></section>
+        <h2 class="page-sub-title">Actual courses</h2>
+        <section id="courses-list"></section>
       </div>
     </main>
   </body>
