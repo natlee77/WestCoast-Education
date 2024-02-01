@@ -80,7 +80,7 @@ export default class HttpClient {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-           users: user
+           users: Array(user)
         }),
       });
       if (response.ok) {

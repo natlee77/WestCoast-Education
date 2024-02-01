@@ -86,7 +86,7 @@ const UsersOrderedCourse = async (id) => {
   const url = `http://localhost:3000/courses/${id}`;
   const http = new HttpClient(url);
   const course = await http.get();   
-  const users =Array(course.users );
+  const users = (course.users);
   console.log('u',users );
   
   users.forEach(user => { 
