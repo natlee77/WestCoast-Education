@@ -21,7 +21,7 @@ const initPage = async () => {
   const courseDetails = createCourseDetails(course);
   aboutcourse.appendChild(courseDetails);
   //  lägga till inloggat user till course   
-  await OrderAction(courseId);
+     OrderAction(courseId);
   await UsersOrderedCourse(courseId);
 }
 
@@ -34,10 +34,12 @@ async function displayCourseDetails(id) {
   return course;
 }
 
-const OrderAction = async (courseId) => {
+const OrderAction =  (courseId) => {
   const userfinns = getFromLocalStorage();
   if (userfinns) {
-    await addUsertoCourse(courseId);
+      addUsertoCourse(courseId);
+    //redirect  
+    // location.href = './gallery.html';
   } else {
     //redirect  /pages/gallery.html
     location.href = '../pages/user/sign.html'
@@ -46,7 +48,7 @@ const OrderAction = async (courseId) => {
 
 const addUsertoCourse = async (id) => {
   try {
-    //userID 
+    //userID
     const user = await foundUserbyEmail();
     //fetch course      
     const url = `http://localhost:3000/courses/${id}`;
@@ -55,19 +57,21 @@ const addUsertoCourse = async (id) => {
     // Update course with user
     // const updatedCourse = { ...course, users: [...course.users, user] };
     const res = await http.updatePatch(course, user);
+
     console.log('Updated course:', res);
     return res;
-    //redirect  
-    location.href = './admin/listUser.html';
+    
+  
   } catch (error) {
     console.error('Error adding user to course:', error);
     throw error;
-  } 
+  }
 }
 
 const foundUserbyEmail = async () => {
   const users = await getAllUsers();
   const userfinns = getFromLocalStorage();
+
   if (userfinns) {
     const foundUser = users.find(
       (u) => u.email.trim() === userfinns[0]);
@@ -81,14 +85,14 @@ const foundUserbyEmail = async () => {
 const UsersOrderedCourse = async (id) => {
   const url = `http://localhost:3000/courses/${id}`;
   const http = new HttpClient(url);
-  const course = await http.get();
-  const users = course.usersBokade
-  users.forEach(user => {
-   createStudentsDetails(user, students)
+  const course = await http.get();   
+  const users =Array(course.users );
+  console.log('u',users );
+  
+  users.forEach(user => { 
+    createStudentsDetails(user, students);
   })
 }
-
-
 console.log('btn', orderBtn);
 document.addEventListener('DOMContentLoaded', initPage);
 orderBtn.addEventListener('submit', OrderAction);

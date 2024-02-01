@@ -73,21 +73,15 @@ export default class HttpClient {
     }
   }
   async updatePatch(course ,user) {
-    
-    const updatedCourse   =   (course.usersBokade ).includes(user )    
-    ? course.usersBokade 
-    : [ ...course.usersBokade ,  user   ]; 
-    // { ...course, users: [...course.users, user] }
-    
-   
     try {       
-      const response = await fetch(this.#url, {
-       
+      const response = await fetch(this.#url, {       
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(updatedCourse ),
+        body: JSON.stringify({
+           users: user
+        }),
       });
       if (response.ok) {
           const result = await response.json();        

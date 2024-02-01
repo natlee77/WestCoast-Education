@@ -1,6 +1,6 @@
 {
   "courses": [
-    {  
+    {
       "id": 1,
       "title": "IT Support",
       "number": "0987",
@@ -170,7 +170,8 @@
       "type": "classroom",
       "imageUrl": "no-bild.jpg",
       "description": "mmmmmmm",
-      "id": 10
+      "id": 10,
+      "users": []
     },
     {
       "title": "tttttttttt",
@@ -180,7 +181,18 @@
       "type": "distance",
       "imageUrl": "no-bild.jpg",
       "description": "gfhfh",
-      "id": 11
+      "id": 11,
+      "users": {
+        "firstName": "Teo",
+        "lastName": "Matrix",
+        "street": "Kosmos 22",
+        "postIndex": "11111",
+        "city": "London",
+        "telephone": "000000000000",
+        "email": "teo@gmail.com",
+        "password": "11111",
+        "id": 4
+      }
     }
   ],
   "users": [
