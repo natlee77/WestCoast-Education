@@ -1,6 +1,7 @@
 {
   "courses": [
-    {
+    {  
+      "id": 1,
       "title": "IT Support",
       "number": "0987",
       "days": 90,
@@ -9,23 +10,11 @@
       "imageUrl": "ai.jpg",
       "rating": 4.8,
       "description": "test",
-      "users": [
-        {
-          "id": 1,
-          "firstName": "Merry",
-          "lastName": "Popins",
-          "telephone": "+4612345678",
-          "street": "Huvudgatan 1",
-          "postIndex": 12345,
-          "city": "Degerfors",
-          "email": "info@info.com",
-          "password": "123456"
-        }
-      ],
-      "id": 1
+      "users": []
     },
     {
-      "number": "0876",
+      "id": 2,
+      "number": "0XCV876",
       "title": "Python",
       "days": 110,
       "type": "distance",
@@ -37,6 +26,7 @@
       "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam commodo venenatis rhoncus. VivamusvehicleId lacusvehicleId elit tristique vulputate.",
       "users": [
         {
+          "id": 2,
           "firstName": "Nataliya",
           "lastName": "Lisjö",
           "street": "Bredablicksgatan 10 a",
@@ -44,8 +34,7 @@
           "city": "Degerfors",
           "telephone": "0735651034",
           "email": "natlisjo@gmail.com",
-          "password": "admin",
-          "id": 2
+          "password": "admin"
         },
         {
           "id": 1,
@@ -58,10 +47,10 @@
           "email": "info@info.com",
           "password": "123456"
         }
-      ],
-      "id": 2
+      ]
     },
     {
+      "id": 3,
       "number": "5231",
       "title": "Cybersecurity",
       "days": 140,
@@ -95,8 +84,7 @@
           "email": "info@info.com",
           "password": "123456"
         }
-      ],
-      "id": 3
+      ]
     },
     {
       "number": "1231",

@@ -1,3 +1,4 @@
+// import User from "../Models/User";
 export default class HttpClient {
   // private
   #url = '';
@@ -26,8 +27,7 @@ export default class HttpClient {
     }
   }
 //
-  async add(data) {
-     
+  async add(data) {     
     try {
         const response = await fetch(this.#url, {
           //post metod--skapa fetch paket
@@ -42,7 +42,7 @@ export default class HttpClient {
 
       if (response.ok) {
           const result = await response.json();
-          console.log(response);
+        
         //  return result;
       } else {
         throw new Error(`${response.status} ${response.statusText}`);
@@ -63,7 +63,7 @@ export default class HttpClient {
       });
       if (response.ok) {
           const result = await response.json();
-          console.log(response);
+        
           return result;
       } else {
         throw new Error(`${response.status} ${response.statusText}`);
@@ -72,18 +72,26 @@ export default class HttpClient {
       throw new Error(`Error in update metod: ${error}`);
     }
   }
-  async updatePatch(data) {
+  async updatePatch(course,user) {
+    
+    const updatedCourse   =  course.users.includes(user)
+    
+    ? course.users
+    : [  course.users  ,   user  ]; 
+   console.log('user--- ', ...course.users  ) 
+   
     try {       
       const response = await fetch(this.#url, {
+       
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(updatedCourse ),
       });
       if (response.ok) {
-          const result = await response.json();
-          console.log(response);
+          const result = await response.json();        
+         
           return result;
       } else {
         throw new Error(`${response.status} ${response.statusText}`);
@@ -99,7 +107,7 @@ export default class HttpClient {
       });
       // if (response.ok) {
       //    const result = await response.json();
-      //   // console.log(response);
+      //   //
       //     return result;
       // } else {
       //   throw new Error(`${response.status} ${response.statusText}`);

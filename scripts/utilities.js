@@ -1,15 +1,11 @@
 export const convertFormDataToJson = (formData) => {
   const data = Object.fromEntries(formData.entries());
- 
-
   return data;
 };
 export const getAllUsers = async () => {
   try {
       const url = 'http://localhost:3000/users';
-
       const response = await fetch(url);
-
       if (response.ok) {
           const result = await response.json();
           return result;
@@ -40,9 +36,7 @@ export const getFromLocalStorage = () => {
   } else {
      users = JSON.parse(localStorage.getItem('westcoast users'));
   }
-  
-  
-   return users;
+     return users;
 };
 
  

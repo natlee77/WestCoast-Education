@@ -23,10 +23,10 @@ const selectedCard = (event)=>{
 
     if (event.target.localName === 'div'){
         kursId = event.target.getAttribute('kursId');
-         console.log(kursId);
+        
     }else if (event.target.localName === 'span'){
         kursId = event.target.parentElement.getAttribute('kursId');
-        console.log(kursId);
+       
     }
      //redirect => to edit.html
      location.href = `./edit-course.html?id=${kursId}`;

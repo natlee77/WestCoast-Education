@@ -13,7 +13,7 @@ async function initPage() {
   // Hämta in alla bilder 
   const images = document.querySelectorAll('.course-image img');
   // knyt en klick händelse till varje bild..
-  addImageClickHandler(images);//from dom.js
+  addImageClickHandler(images); 
 }
 
 const loadCourses = async () => {

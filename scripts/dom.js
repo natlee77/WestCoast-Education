@@ -124,13 +124,13 @@ export const createCourseDetails = (course) => {
          </div>
           
          </form>
-        <p> Student ordered this course: ${course.users[0].firstName } ${course.users[0].lastName }</p>
-         <p> ${course.studentName}</p>
+        
     
         
       </div>
     `;
-    
+    // <p> Student ordered this course: ${course.users[0].firstName } ${course.users[0].lastName }</p>
+        //  <p> ${course.studentName}</p>
   return details;
 };
 // Exportera createCard och addImageClickHandler

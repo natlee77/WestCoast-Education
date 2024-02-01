@@ -45,7 +45,7 @@ export   default class AppManager{
                      
                     );  
                  return user; 
-                 console.log(user);
+               
                      
             } catch (error) {     
                 throw new Error(`problem to get data ${response.status} ${response.statusText}`);

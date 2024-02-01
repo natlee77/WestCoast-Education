@@ -31,8 +31,8 @@ const loadDataToForm = (course) => {
         if (key !== 'id') {
             const inne = form.elements[key];
             inne.value = value;
-              console.log(key);
-              console.log(value);
+            //   console.log(key);
+            //   console.log(value);
         }
     }
 };
