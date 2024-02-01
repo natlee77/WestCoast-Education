@@ -72,13 +72,13 @@ export default class HttpClient {
       throw new Error(`Error in update metod: ${error}`);
     }
   }
-  async updatePatch(course,user) {
+  async updatePatch(course ,user) {
     
-    const updatedCourse   =  course.users.includes(user)
+    const updatedCourse   =   (course.usersBokade ).includes(user )    
+    ? course.usersBokade 
+    : [ ...course.usersBokade ,  user   ]; 
+    // { ...course, users: [...course.users, user] }
     
-    ? course.users
-    : [  course.users  ,   user  ]; 
-   console.log('user--- ', ...course.users  ) 
    
     try {       
       const response = await fetch(this.#url, {
@@ -100,6 +100,8 @@ export default class HttpClient {
       throw new Error(`Error in update metod: ${error}`);
     }
   }
+
+
   async delete(data) {
     try {
       const response = await fetch(this.#url, {

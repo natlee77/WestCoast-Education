@@ -133,6 +133,20 @@ export const createCourseDetails = (course) => {
         //  <p> ${course.studentName}</p>
   return details;
 };
+export const createStudentsDetails = (user ,element) => {
+      
+    const container= createDiv();    
+    container.appendChild(createSpan(`Student :  ${user.firstName} ${user.lastName} *`));
+    container.appendChild(createSpan( user.email));
+    // container.appendChild(createSpan( ` * tel:  ${user.telephone} `  )) ;
+    element.appendChild(container); 
+  
+ 
+}
+  
+  
+ 
+
 // Exportera createCard och addImageClickHandler
 // namngiven export
 export { createCard, addImageClickHandler, createCoursesList, createCourseCard, createUsersList  };
