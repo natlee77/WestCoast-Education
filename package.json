@@ -4,6 +4,7 @@
   "description": "För att kunna köra applikation så måste vi köra npm install för att installera json-server. Öppna upp terminalfönstret i VSCode och skriv in följande kommando:",
   "main": "dom.js",
   "scripts": {
+    "start": "json-server --watch data.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
